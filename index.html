@@ -10,8 +10,9 @@
     <body>
         <header class="nav">
             <div class="sky" ><img src="./image/sky-logo.png" alt="sky-logo"></div>
-            <div class="bar"><h1>Title Bar</h1></div>
-            <div class='btn moodslider'><a href="#" >Moodslider | Upload Content</a></div>
+            <div class="bar"><h1>What Is Your Mood?</h1></div>
+            <div class='btn moodslider'><a href="#" onclick="resetPage()" >Moodslider</a></div>
+            <div class='btn upload'><a href="#" onclick="loadXMLDoc()" >Upload Content</a></div>
         </header>
         <div class="container">
             <section class="grid">
@@ -25,11 +26,11 @@
                     </ul>
                 </div>
                 <div class="two">
-                    <ul>
-                        <li><input class="slidem" type="range" min="-100" max="100" value="0"></li>
-                        <li><input class="slidem" type="range" min="-100" max="100" value="0"></li>
-                        <li><input class="slidem" type="range" min="-100" max="100" value="0"></li>
-                        <li><input class="slidem" type="range" min="-100" max="100" value="0"></li>
+                    <ul id="myForm">
+                        <li><input id="one"class="slidem" type="range" min="-100" max="100" value="0"></li>
+                        <li><input id="two"class="slidem" type="range" min="-100" max="100" value="0"></li>
+                        <li><input id="three"class="slidem" type="range" min="-100" max="100" value="0"></li>
+                        <li><input id="four"class="slidem" type="range" min="-100" max="100" value="0"></li>
                         
                     </ul>
                 </div>
@@ -43,31 +44,10 @@
                     </ul>
                 </div>
             </section>
-            <section class="boxes top bg">
-                <div>
-                    <p class="box">No Content</p>
-                    <p class="box t">No Film</p>
-                </div>
-                <div>
-                    <p class="box">No Content</p>
-                    <p class="box t">No Film</p>
-                </div>
-                <div>
-                    <p class="box">No Content</p>
-                    <p class="box t">No Film</p>
-                </div>
-                <div>
-                    <p class="box">No Content</p>
-                    <p class="box t">No Film</p>
-                </div>
-                <div>
-                    <p class="box">No Content</p>
-                    <p class="box t">No Film</p>
-                </div> 
-            </section>
+            <div >
+                    <section class="boxes bg" id="demo"></section>
+            </div>          
         </div> 
-        <footer >
-            <p>MONA AZAMI SKY project, Copyright @ 2019</p>
-        </footer>
+        <script type="text/javascript" src="main.js"></script>
     </body>
     </html>

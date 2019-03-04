@@ -1,13 +1,12 @@
 :root {
 	--primary: #e2e2e2;
-	--dark: #d7d7d7;
-	--light: #ffa600;
+	--light: #d7d7d7;
 	--shadow: 0 2px 5px rgba(0, 0, 0, 0.6);
 }
 html {
 	box-sizing: border-box;
 	font-family: Arial, Helvetica, sans-serif;
-	color: var(--dark);
+	color: var(--light);
 	font: 1rem/2.8 Helvetica, Arial;
 }
 body {
@@ -22,7 +21,7 @@ body {
 }
 
 header {
-	height: 150px;
+	height: 130px;
 	color: #000000;
 	background-color: #c7c7c7;
 }
@@ -46,7 +45,7 @@ header img {
 	border-radius: 5px;
 	margin: 5px 0;
 	font-family: 'Times New Roman', Times, serif;
-	background-color: var(--dark);
+	background-color: var(--light);
 	padding: 0;
 }
 .bar h1 {
@@ -54,47 +53,58 @@ header img {
 	padding: 0;
 	font-size: 1.3em;
 }
-
+.upload {
+	grid-column: 4/5;
+	text-align: left;
+	padding: 5px;
+}
+.upload:hover {
+	color: yellow;
+}
 .moodslider {
-	grid-column: 2 / 5;
-	border-radius: 5px;
-	margin: 5px 0;
-	font-size: 1.1rem;
-	font-family: 'Times New Roman', Times, serif;
-	background-color: var(--dark);
+	grid-column: 3 / 4;
+	text-align: right;
+	margin-right: 10px;
+	padding: 5px;
+}
+.moodslider:hover {
+	color: #1500ff;
 }
 .moodslider a {
+	text-decoration: none;
+	color: #000000;
+}
+.upload a {
 	text-decoration: none;
 	color: #000000;
 }
 
 .boxes {
 	display: grid;
-	grid-row-gap: 20px;
+	grid-row-gap: 30px;
 	grid-column-gap: 10px;
-	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+	grid-template-columns: repeat(5, minmax(auto, 200px));
 	justify-content: center;
 	text-align: center;
-	margin-top: 0.5rem;
 }
 
 .box {
-	background-color: var(--dark);
-	padding-bottom: 0.7rem;
+	background-color: var(--primary);
+	padding-bottom: 0.5rem;
 	text-align: center;
 	color: #000000;
 	text-transform: uppercase;
 	box-shadow: var(--shadow);
-	height: 140px;
+	height: 30px;
+	font-size: 0.9rem;
 }
-.box h5 {
-	margin: 0.4rem;
+.myimg {
+	box-shadow: var(--shadow);
+	max-height: 300px;
 }
+
 .bg {
 	grid-auto-rows: minmax(150px, auto);
-}
-.top {
-	margin-top: 100px;
 }
 
 div .t {
@@ -126,18 +136,7 @@ input {
 	width: 100px;
 	text-align: center;
 }
-footer {
-	position: fixed;
-	left: 0;
-	bottom: 0;
-	width: 100%;
-	background-color: var(--dark);
-	color: black;
-	padding: 10px;
-	margin-top: 50px;
-	box-shadow: var(--shadow);
-}
-footer p {
-	margin: auto;
-	text-align: center;
+
+.hidden {
+	display: none;
 }
